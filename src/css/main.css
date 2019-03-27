@@ -1,0 +1,29 @@
+body{
+    text-transform: uppercase;
+}
+
+.search-field{
+    width: 90%
+}
+
+.inline{
+    display: inline;
+    margin: 5px;
+}
+
+.right
+{
+    float:right;
+}
+
+.under-search{
+    margin-top: 20px
+}
+
+.search-result{
+    margin-top:30px
+}
+
+#faceplate{
+    margin:50px;
+}

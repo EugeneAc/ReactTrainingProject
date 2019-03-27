@@ -1,7 +1,6 @@
 var React = require('react');
-var SearchString = require('./searchString.jsx');
-var SearchBy = require('./searchBy.jsx');
-var SearchBtn = require('./searchBtn.jsx');
+var TogleBtns = require('./toggleBtns.jsx');
+var SearchResults = require('./searchResultString.jsx');
 
 class SearchContainer extends React.Component {
     constructor(props){
@@ -11,29 +10,46 @@ class SearchContainer extends React.Component {
         };
                            
         this.performSearch = this.performSearch.bind(this);
+        this.onTextChanged = this.onTextChanged.bind(this);
      }
               
     performSearch(){
+        console.log(this.state.searchValue);
+    }
+
+    onTextChanged(e){
+        this.setState({
+            searchValue: e.target.value
+          });
         console.log(this.state.searchValue);
     }
                
     render() {
         return(
             <section>         
-                <h2>{this.props.data.title}</h2>
-                    <SearchString inputValue={this.state.searchValue}/>
-                    <SearchBtn title="Search"  onClick={this.performSearch} />
-                    <button  onClick={this.performSearch}>test</button>;
-                <div>
-                    <span>Search by</span>
-                    <SearchBy title="Title"/>
-                    <SearchBy title="Genre"/>
-                    
+                <h2>Find your movie</h2>
+                    <input placeholder="Search" onChange={this.onTextChanged} className="search-field"/>
+                    <button onClick={this.performSearch} className="">
+                        <span className="glyphicon glyphicon-share-alt"></span>
+                    </button>
+                <div className = "under-search">
+                    <div className="inline">
+                        <span>Search by</span>
+                        <TogleBtns titleLeft="Title" titleRight="Genre" className="inline"/>
+                    </div>
+                    <div className="right">
+                        <button onClick={this.performSearch}>Search</button>
+                    </div>
                 </div>
-                <div>
-                    <SearchBtn title="Search" onClick={this.performSearch}/>
+                <div className="search-result">
+                    <SearchResults moviesFound="7"/>
+                    <div className="right">
+                        Sort by
+                    <TogleBtns titleLeft="Release date" titleRight="Rating"/>
+                    </div>
                 </div>
-            </section>);
+            </section>
+            );
     }
 }
  
