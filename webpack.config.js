@@ -1,8 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = {
-  module: {
+module.exports = env => {
+    console.log('Environment: ', env.NODE_ENV);
+  
+    return {
+    module: { 
     rules: [
       {
         test: /\.(js|jsx)$/,
@@ -36,4 +39,5 @@ module.exports = {
         chunkFilename: "[id].css"
     })
   ]
+};
 };
