@@ -6,29 +6,34 @@ class ToggleBtns extends React.Component {
         super(props);
         this.state = {
             classLeft: "active",
-            classRight: ""
+            classRight: "",
         };
           
         this.pressLeft = this.pressLeft.bind(this);
         this.pressRight = this.pressRight.bind(this);
     }
-    
+
     pressLeft(){
-        console.log(!(this.state.classLeft === "active"));
         if (!(this.state.classLeft === "active"))
         this.setState({
             classLeft: "active",
-            classRight: ""
+            classRight: "",
           });
+          this.activeChaned("left");
     }
 
     pressRight(){
-        console.log(!(this.state.classRight === "active"));
         if (!(this.state.classRight === "active"))
         this.setState({
             classRight: "active",
-            classLeft: ""
+            classLeft: "",
           });
+          this.activeChaned("right");
+    }
+
+    activeChaned(active){
+        console.log(active)
+        this.props.changeActive(active);
     }
     
     render() {

@@ -27,3 +27,39 @@ body{
 #faceplate{
     margin:50px;
 }
+
+.movies-container{
+    display: flex;
+    margin-top: -35px;
+}
+
+.movie-face-plate{
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.movie-face-plate img{
+    height: 300px;
+}
+
+.movie-face-plate .movie-year{
+    margin: 2px;
+    padding: 2px;
+    border: solid;
+    border-width: 1px;
+    font-size:11px
+}
+
+.movie-face-plate .movie-genre{
+    text-transform:none;
+}
+
+.movie-info{
+    text-transform:none;
+}
+
+.movie-info .movie-desc{
+    display: inline-grid;
+    float: right;
+    width: 80%;
+}

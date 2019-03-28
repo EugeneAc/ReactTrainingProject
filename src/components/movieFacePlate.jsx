@@ -3,16 +3,16 @@ var React = require('react');
 class MovieFacePlate extends React.Component {
     render() {
         return (
-            <div>
+            <div className="">
                 <img src={this.props.imgSrc}></img>
-                <div className = "movie-name">
+                <div className = "movie-name inline">
                     {this.props.movieName}
                 </div>
-                <div className = "movie-year">
+                <div className = "movie-year right">
                     {this.props.movieYear}
                 </div>
-                <div className = "movie-jenre">
-                    {this.props.movieJenre}
+                <div className = "movie-genre">
+                    {this.props.movieGenre}
                 </div>
             </div>
         );
