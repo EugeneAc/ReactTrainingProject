@@ -36,10 +36,12 @@ body{
 .movie-face-plate{
     margin: 20px;
     margin-top: 40px;
+    width: 200px;
 }
 
 .movie-face-plate img{
     height: 300px;
+    max-width: 100%;
 }
 
 .movie-face-plate .movie-year{
