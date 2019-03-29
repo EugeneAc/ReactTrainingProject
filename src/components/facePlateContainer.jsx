@@ -35,30 +35,26 @@ class FacePlateContainer extends React.Component {
 
     render() {
             return (
-                <ErrorBoundary>
-                <div className="right">
-                        Sort by
-                    <TogleBtns titleLeft="Release date" titleRight="Rating" changeActive={this.onChangeSorting.bind(this)}/>
-                    </div>
-                    <div className ="movies-container">
-                    {
-                   this.props.movies.sort(this.changeSorting()).map(function(item ,i){
-                //    console.log(item);
-                    return (
-                        <div className = "movie-face-plate">
-                            <MovieFacePlate 
-                            key={item+i}
-                            imgSrc={item.imgSrc} 
-                            movieName={item.movieName} 
-                            movieYear={item.movieYear} 
-                            movieGenre={item.movieGenre}/>
-                        </div>)
-                })
-            }
-            </div>
-            </ErrorBoundary>
-        )
-    }
+                    <ErrorBoundary>
+                        <div className="right">
+                                Sort by
+                            <TogleBtns titleLeft="Release date" titleRight="Rating" changeActive={this.onChangeSorting.bind(this)}/>
+                        </div>
+                        <div className ="movies-container">
+                            {this.props.movies.sort(this.changeSorting()).map((video,i) => 
+                                <div className = "movie-face-plate" key={i}>
+                                    <MovieFacePlate 
+                                    imgSrc={video.imgSrc} 
+                                    movieName={video.movieName} 
+                                    movieYear={video.movieYear} 
+                                    movieGenre={video.movieGenre}/>
+                                </div>
+                                )   
+                            }
+                        </div>
+                    </ErrorBoundary>
+            )
+        }
 }
 
 module.exports = FacePlateContainer;
