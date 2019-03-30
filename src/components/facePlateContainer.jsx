@@ -1,6 +1,5 @@
 var React = require('react');
 var MovieFacePlate = require('./movieFacePlate.jsx');
-var TogleBtns = require('./toggleBtns.jsx');
 var ErrorBoundary = require('./errorBoundary.jsx');
 
 class FacePlateContainer extends React.Component {
@@ -35,23 +34,8 @@ class FacePlateContainer extends React.Component {
 
     render() {
             return (
-                    <ErrorBoundary>
-                        <div className="right">
-                                Sort by
-                            <TogleBtns titleLeft="Release date" titleRight="Rating" changeActive={this.onChangeSorting.bind(this)}/>
-                        </div>
-                        <div className ="movies-container">
-                            {this.props.movies.sort(this.changeSorting()).map((video,i) => 
-                                <div className = "movie-face-plate" key={i}>
-                                    <MovieFacePlate 
-                                    imgSrc={video.imgSrc} 
-                                    movieName={video.movieName} 
-                                    movieYear={video.movieYear} 
-                                    movieGenre={video.movieGenre}/>
-                                </div>
-                                )   
-                            }
-                        </div>
+                <ErrorBoundary>
+                    <MovieFacePlate movies={this.props.movies.sort(this.changeSorting())} onChangeSorting={this.onChangeSorting.bind(this)}/>
                     </ErrorBoundary>
             )
         }

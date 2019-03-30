@@ -46,9 +46,6 @@ class SearchContainer extends React.Component {
                         <span>Search by</span>
                         <TogleBtns titleLeft="Title" titleRight="Genre" className="inline" changeActive={this.onChangeSearchParam.bind(this)}/>
                     </div>
-                    <div className="right">
-                        <button onClick={this.performSearch}>Search</button>
-                    </div>
                 </div>
                 <div className="search-result">
                     <SearchResults moviesFound="3"/>

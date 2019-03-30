@@ -2,8 +2,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = env => {
-    console.log('Environment: ', env.NODE_ENV);
-  
+  var environment = env.production ? "production" : "development";
+    console.log('Environment : ', environment);
+    
     return {
     module: { 
     rules: [
@@ -11,8 +12,12 @@ module.exports = env => {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: "babel-loader",
+          options: {
+            envName: environment
+          }
+        },
+        
       },
       {
         test: /\.html$/,

@@ -1,7 +1,7 @@
 var React = require('react');
 
 class ToggleBtns extends React.Component {
-             
+            
     constructor(props) {
         super(props);
         this.state = {
@@ -32,7 +32,8 @@ class ToggleBtns extends React.Component {
     }
 
     activeChaned(active){
-        console.log(active)
+            console.warn(active)
+        
         this.props.changeActive(active);
     }
     
@@ -46,4 +47,4 @@ class ToggleBtns extends React.Component {
     }
 }
 
-module.exports = ToggleBtns;
+    module.exports = ToggleBtns;

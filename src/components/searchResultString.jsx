@@ -1,13 +1,11 @@
 var React = require('react');
 
-class SearchResultString extends React.Component {
-    render() {
+var SearchResultString = (props) =>  {
         return (
             <div className="inline">
-                <span>{this.props.moviesFound} Movies found</span>
+                <span>{props.moviesFound} Movies found</span>
             </div>
         );
-    }
 }
 
 module.exports = SearchResultString;

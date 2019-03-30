@@ -11,8 +11,7 @@ body{
     margin: 5px;
 }
 
-.right
-{
+.right{
     float:right;
 }
 
@@ -24,13 +23,16 @@ body{
     margin-top:30px
 }
 
+.sorting-panel{
+    margin-top:-30px
+}
+
 #faceplate{
     margin:50px;
 }
 
 .movies-container{
     display: flex;
-    margin-top: -35px;
 }
 
 .movie-face-plate{
@@ -42,6 +44,7 @@ body{
 .movie-face-plate img{
     height: 300px;
     max-width: 100%;
+    min-width: 200px;
 }
 
 .movie-face-plate .movie-year{
@@ -58,10 +61,13 @@ body{
 
 .movie-info{
     text-transform:none;
+    display: flex;
+}
+
+.movie-info img{
 }
 
 .movie-info .movie-desc{
     display: inline-grid;
-    float: right;
     width: 80%;
 }
