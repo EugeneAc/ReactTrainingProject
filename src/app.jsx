@@ -38,15 +38,39 @@ class App extends React.Component {
                       movieGenre: "Action",
                       rating:3
                     }
-            ]
+            ],
+            sorting:"left"
         }
+    }
+
+    changeSorting(){
+        if (this.state.sorting === "left")
+        {
+                return function(a, b){
+                    return a.movieYear - b.movieYear
+            }
+        }
+        else
+        {
+                return function(a, b){
+                    return b.rating - a.rating
+            }
+        }
+    }
+
+    onChangeSorting(newSorting){
+        this.setState({
+            sorting: newSorting
+        })
     }
     
     render() {
             return (
                     <div className="">
                     <SearchContainer />
-                    <FacePlateContainer movies={this.state.movies}/>
+                    <FacePlateContainer 
+                        movies={this.state.movies.sort(this.changeSorting())} 
+                        onChangeSorting={this.onChangeSorting.bind(this)}/>
                     <MovieInfo movie={this.state.sampleMovie}/>
                     </div>
             )
