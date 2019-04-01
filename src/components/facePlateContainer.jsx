@@ -2,7 +2,7 @@ var React = require('react');
 var MovieFacePlate = require('./movieFacePlate.jsx');
 var ErrorBoundary = require('./errorBoundary.jsx');
 
-class FacePlateContainer extends React.Component {
+class FacePlateContainer extends React.PureComponent {
     constructor(props){
         super(props);
 
