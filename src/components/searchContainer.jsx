@@ -17,20 +17,20 @@ class SearchContainer extends React.Component {
 
     performSearch(){
         console.log(this.state.searchValue);
+        this.props.onSearch(this.state.searchValue);
     }
 
     onTextChanged(e){
         this.setState({
             searchValue: e.target.value
           });
-        console.log(this.state.searchValue);
     }
 
     onChangeSearchParam(searchParam){
         this.setState({
             searchParam: searchParam
         });
-        console.log("serch param " + searchParam)
+        this.props.onChangeSearchParam(searchParam);
     }
                
     render() {

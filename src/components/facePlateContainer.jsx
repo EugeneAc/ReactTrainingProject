@@ -11,8 +11,8 @@ class FacePlateContainer extends React.PureComponent {
     render() {
             return (
                 <ErrorBoundary>
-                    <MovieFacePlate movies={this.props.movies} onChangeSorting={this.props.onChangeSorting}/>
-                    </ErrorBoundary>
+                    <MovieFacePlate movies={this.props.movies} onChangeSorting={this.props.onChangeSorting} onChangeSelected={this.props.onChangeSelected}/>
+                </ErrorBoundary>
             )
         }
 }

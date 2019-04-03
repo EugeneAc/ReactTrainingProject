@@ -5,43 +5,27 @@ class ToggleBtns extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            classLeft: "active",
-            classRight: "",
+            className: "left"
         };
-          
-        this.pressLeft = this.pressLeft.bind(this);
-        this.pressRight = this.pressRight.bind(this);
+
     }
 
-    pressLeft(){
-        if (!(this.state.classLeft === "active"))
+    onPress(e){
         this.setState({
-            classLeft: "active",
-            classRight: "",
+            className: e
           });
-          this.activeChaned("left");
-    }
-
-    pressRight(){
-        if (!(this.state.classRight === "active"))
-        this.setState({
-            classRight: "active",
-            classLeft: "",
-          });
-          this.activeChaned("right");
+          this.activeChaned(e);
     }
 
     activeChaned(active){
-            console.warn(active)
-        
         this.props.changeActive(active);
     }
     
     render() {
         return (
             <div className="toggle-btms inline">
-                <button onClick={this.pressLeft} className={this.state.classLeft} >{this.props.titleLeft}</button>
-                <button onClick={this.pressRight} className={this.state.classRight} >{this.props.titleRight}</button>
+                <button onClick={this.onPress.bind(this, "left")} className={this.state.className} >{this.props.titleLeft}</button>
+                <button onClick={this.onPress.bind(this, "right")} className={this.state.className} >{this.props.titleRight}</button>
             </div>
         );
     }
