@@ -44,7 +44,8 @@ class App extends React.Component {
             ],
             sorting:"left",
             searchString : "",
-            searchParam : "Title"
+            searchParam : "Title",
+            moviesFound: "3"
         }
     }
 
@@ -91,10 +92,11 @@ class App extends React.Component {
     
     render() {
             return (
-                    <div className="">
+                    <div className="new-class">
                     <SearchContainer
                         onSearch={this.onChangeSerachString.bind(this)}
-                        onChangeSearchParam={this.onChangeSearchParam.bind(this)}/>
+                        onChangeSearchParam={this.onChangeSearchParam.bind(this)}
+                        moviesFound = {this.state.movies.filter(this.filterMovies()).length}/>
                     <FacePlateContainer 
                         movies={this.state.movies.sort(this.sortMovies()).filter(this.filterMovies())} 
                         onChangeSorting={this.onChangeSorting.bind(this)}

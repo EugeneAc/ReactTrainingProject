@@ -7,20 +7,15 @@ class ToggleBtns extends React.Component {
         this.state = {
             className: "left"
         };
-
     }
 
     onPress(e){
         this.setState({
             className: e
           });
-          this.activeChaned(e);
+          this.props.changeActive(e);
     }
 
-    activeChaned(active){
-        this.props.changeActive(active);
-    }
-    
     render() {
         return (
             <div className="toggle-btms inline">

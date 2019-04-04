@@ -48,7 +48,7 @@ class SearchContainer extends React.Component {
                     </div>
                 </div>
                 <div className="search-result">
-                    <SearchResults moviesFound="3"/>
+                    <SearchResults moviesFound={this.props.moviesFound}/>
                 </div>
             </ErrorBoundary>
             );
