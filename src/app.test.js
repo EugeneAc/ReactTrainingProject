@@ -16,7 +16,7 @@ it('matches the snapshot', () => {
   });
 
   describe('App component', () => {
-    it('starts with a count of 3', () => {
+    it('Check caption', () => {
       const wrapper = shallow(<SearchContainer />);
       const text = wrapper.find('h2').text();
       expect(text).toEqual('Find your movie');
