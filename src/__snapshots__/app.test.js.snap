@@ -13,7 +13,6 @@ exports[`matches the snapshot 1`] = `
     placeholder="Search"
   />
   <button
-    className=""
     onClick={[Function]}
   >
     <i

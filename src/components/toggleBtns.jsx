@@ -13,7 +13,11 @@ class ToggleBtns extends React.Component {
         this.setState({
             className: e
           });
-          this.props.changeActive(e);
+          if (this.props.chaneActive!=undefined)
+          {
+            this.props.changeActive(e);
+          }
+          
     }
 
     render() {

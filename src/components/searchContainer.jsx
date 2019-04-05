@@ -38,7 +38,7 @@ class SearchContainer extends React.Component {
             <ErrorBoundary>         
                 <h2>Find your movie</h2>
                     <input placeholder="Search" onChange={this.onTextChanged} className="search-field"/>
-                    <button onClick={this.performSearch} className="">
+                    <button onClick={this.performSearch}>
                     <i className="fa fa-search" aria-hidden="true"></i>
                     </button>
                 <div className = "under-search">
