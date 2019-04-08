@@ -10,8 +10,8 @@ var MovieFacePlate = (props) => {
                         </div>
                         <div className ="movies-container">
                             {props.movies.map((video,i) => 
-                            <div className="movie-face-plate" onClick={props.onChangeSelected.bind(this, video)} data="aaa">
-                                <img src={video.imgSrc} data="123"></img>
+                            <div className="movie-face-plate" onClick={props.onChangeSelected.bind(this, video)}>
+                                <img src={video.imgSrc}></img>
                                 <div className = "movie-name inline">
                                     {video.movieName}
                                 </div>

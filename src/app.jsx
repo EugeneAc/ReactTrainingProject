@@ -95,12 +95,6 @@ class App extends React.Component {
         }
     }
 
-    
-    performSort(newSorting)
-    {
-        this.setState({movies: sort(this.sortMovies(newSorting))})
-    }
-    
     render() {
             return (
                     <div className="new-class">
