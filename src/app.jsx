@@ -50,7 +50,10 @@ class App extends React.Component {
     }
 
     onChangeSerachString(newSearchString){
-        this.setState({searchString: newSearchString});
+        this.setState(
+            {
+                movies: this.state.movies.filter(this.filterMovies(newSearchString))
+            })
     }
 
     onChangeSearchParam(newSearchParam){
@@ -63,24 +66,26 @@ class App extends React.Component {
     }
 
     onChangeSorting(newSorting){
-        this.setState({sorting: newSorting})
+         this.setState(
+            {
+                movies: this.state.movies.sort(this.sortMovies(newSorting))
+            })
     }
 
     onChangeSelected(newSelected){
-        console.log(newSelected.target)
         this.setState({selectedMovie: newSelected})
     }
 
-    filterMovies()
+    filterMovies(newSearchString)
     {
         return (item) => {
-            return item.movieName.toLowerCase().search(this.state.searchString)!== -1
+            return item.movieName.toLowerCase().search(newSearchString)!== -1
         }
     }
 
-    sortMovies()
+    sortMovies(newSorting)
     {
-        if (this.state.sorting === "left")
+        if (newSorting === "left")
         {
             return function(a, b){return a.movieYear - b.movieYear};
         }
@@ -89,6 +94,12 @@ class App extends React.Component {
             return function(a, b){return b.rating - a.rating};
         }
     }
+
+    
+    performSort(newSorting)
+    {
+        this.setState({movies: sort(this.sortMovies(newSorting))})
+    }
     
     render() {
             return (
@@ -96,9 +107,9 @@ class App extends React.Component {
                     <SearchContainer
                         onSearch={this.onChangeSerachString.bind(this)}
                         onChangeSearchParam={this.onChangeSearchParam.bind(this)}
-                        moviesFound = {this.state.movies.filter(this.filterMovies()).length}/>
+                        moviesFound = {this.state.movies.length}/>
                     <FacePlateContainer 
-                        movies={this.state.movies.sort(this.sortMovies()).filter(this.filterMovies())} 
+                        movies={this.state.movies} 
                         onChangeSorting={this.onChangeSorting.bind(this)}
                         onChangeSelected={this.onChangeSelected.bind(this)}/>
                     <MovieInfo movie={this.state.selectedMovie}/>
