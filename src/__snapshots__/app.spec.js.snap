@@ -60,100 +60,96 @@ exports[`Snapshot App matches the snapshot 1`] = `
     </div>
   </div>
   <div
-    className=""
+    className="alignRight sorting-panel"
+  >
+    Sort by
+    <div
+      className="toggle-btms inline"
+    >
+      <button
+        className="left"
+        onClick={[Function]}
+      >
+        Release date
+      </button>
+      <button
+        className="left"
+        onClick={[Function]}
+      >
+        Rating
+      </button>
+    </div>
+  </div>
+  <div
+    className="movies-container"
   >
     <div
-      className="alignRight sorting-panel"
+      className="movie-face-plate"
+      onClick={[Function]}
     >
-      Sort by
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjJ0oj9DdOyVjYyDREytOES2pKEDgUtXDvNeaDnflAoXfg6I4"
+      />
       <div
-        className="toggle-btms inline"
+        className="movie-name inline"
       >
-        <button
-          className="left"
-          onClick={[Function]}
-        >
-          Release date
-        </button>
-        <button
-          className="left"
-          onClick={[Function]}
-        >
-          Rating
-        </button>
+        Kill Bill
+      </div>
+      <div
+        className="movie-year alignRight"
+      >
+        2003
+      </div>
+      <div
+        className="movie-genre"
+      >
+        Action
       </div>
     </div>
     <div
-      className="movies-container"
+      className="movie-face-plate"
+      onClick={[Function]}
     >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Kill_Bill_Volume_2.png/220px-Kill_Bill_Volume_2.png"
+      />
       <div
-        className="movie-face-plate"
-        onClick={[Function]}
+        className="movie-name inline"
       >
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjJ0oj9DdOyVjYyDREytOES2pKEDgUtXDvNeaDnflAoXfg6I4"
-        />
-        <div
-          className="movie-name inline"
-        >
-          Kill Bill
-        </div>
-        <div
-          className="movie-year alignRight"
-        >
-          2003
-        </div>
-        <div
-          className="movie-genre"
-        >
-          Action
-        </div>
+        Kill Bill 2
       </div>
       <div
-        className="movie-face-plate"
-        onClick={[Function]}
+        className="movie-year alignRight"
       >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Kill_Bill_Volume_2.png/220px-Kill_Bill_Volume_2.png"
-        />
-        <div
-          className="movie-name inline"
-        >
-          Kill Bill 2
-        </div>
-        <div
-          className="movie-year alignRight"
-        >
-          2004
-        </div>
-        <div
-          className="movie-genre"
-        >
-          Action
-        </div>
+        2004
       </div>
       <div
-        className="movie-face-plate"
-        onClick={[Function]}
+        className="movie-genre"
       >
-        <img
-          src="https://i.pinimg.com/originals/bd/71/8c/bd718cb3d0932ff76eafc649921772a9.jpg"
-        />
-        <div
-          className="movie-name inline"
-        >
-          Kill Bill 3
-        </div>
-        <div
-          className="movie-year alignRight"
-        >
-          2018
-        </div>
-        <div
-          className="movie-genre"
-        >
-          Action
-        </div>
+        Action
+      </div>
+    </div>
+    <div
+      className="movie-face-plate"
+      onClick={[Function]}
+    >
+      <img
+        src="https://i.pinimg.com/originals/bd/71/8c/bd718cb3d0932ff76eafc649921772a9.jpg"
+      />
+      <div
+        className="movie-name inline"
+      >
+        Kill Bill 3
+      </div>
+      <div
+        className="movie-year alignRight"
+      >
+        2018
+      </div>
+      <div
+        className="movie-genre"
+      >
+        Action
       </div>
     </div>
   </div>

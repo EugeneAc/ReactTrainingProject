@@ -1,7 +1,7 @@
 var React = require('react');
 
 var SearchContainer = require('./components/SearchContainer.jsx');
-var FacePlateContainer = require('./components/facePlateContainer.jsx');
+var MovieFacePlate = require('./components/MovieFacePlate.jsx');
 var MovieInfo = require('./components/movieInfo.jsx');
 
 class App extends React.Component {
@@ -102,7 +102,7 @@ class App extends React.Component {
                         onSearch={this.onChangeSerachString.bind(this)}
                         onChangeSearchParam={this.onChangeSearchParam.bind(this)}
                         moviesFound = {this.state.movies.length}/>
-                    <FacePlateContainer 
+                    <MovieFacePlate 
                         movies={this.state.movies} 
                         onChangeSorting={this.onChangeSorting.bind(this)}
                         onChangeSelected={this.onChangeSelected.bind(this)}/>

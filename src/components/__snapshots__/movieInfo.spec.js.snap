@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot MovieInfo matches the snapshot 1`] = `
+<div
+  className="movie-info"
+>
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjJ0oj9DdOyVjYyDREytOES2pKEDgUtXDvNeaDnflAoXfg6I4"
+  />
+  <div
+    className="movie-desc"
+  >
+    <div
+      className="movie-name-info inline"
+    >
+      Kill Bill
+    </div>
+    <div
+      className="movie-length-info inline"
+    />
+    <div
+      className="movie-year-info inline"
+    >
+      2003
+    </div>
+    <div
+      className="movie-decs-info inline"
+    >
+      Kill Bill: Volume 1 is a 2003 American martial arts film written and directed by Quentin Tarantino. It stars Uma Thurman as the Bride, who swears revenge on a team of assassins (Lucy Liu, Michael Madsen, Daryl Hannah, and Vivica A. Fox) and their leader Bill (David Carradine) after they try to kill her and her unborn child. Her journey takes her to Japan, where she battles the Tokyo yakuza.
+    </div>
+  </div>
+</div>
+`;

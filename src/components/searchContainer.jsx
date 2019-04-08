@@ -1,7 +1,7 @@
 var React = require('react');
 var TogleBtns = require('./toggleBtns.jsx');
 var SearchResults = require('./searchResultString.jsx');
-var ErrorBoundary = require('./errorBoundary.jsx');
+var SearchContainerDummy = require('./serchContainerDummy.jsx');
 
 class SearchContainer extends React.Component {
     constructor(props){
@@ -30,22 +30,11 @@ class SearchContainer extends React.Component {
                
     render() {
         return(
-            <ErrorBoundary>         
-                <h2>Find your movie</h2>
-                    <input placeholder="Search" onChange={this.onTextChanged.bind(this)} className="search-field"/>
-                    <button onClick={this.performSearch.bind(this, this.state.searchValue)}>
-                    <i className="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                <div className = "under-search">
-                    <div className="inline">
-                        <span>Search by</span>
-                        <TogleBtns titleLeft="Title" titleRight="Genre" className="inline" changeActive={this.onChangeSearchParam.bind(this)}/>
-                    </div>
-                </div>
-                <div className="search-result">
-                    <SearchResults moviesFound={this.props.moviesFound}/>
-                </div>
-            </ErrorBoundary>
+            <SearchContainerDummy 
+                onInputChange={this.onTextChanged.bind(this)}
+                onSearchButtonClick={this.performSearch.bind(this, this.state.searchValue)} 
+                onChangeSearchParam={this.onChangeSearchParam.bind(this)}
+                moviesFound = {this.props.moviesFound} />
             );
     }
 }
